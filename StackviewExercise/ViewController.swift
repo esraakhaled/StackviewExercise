@@ -8,17 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-   
+    
     @IBOutlet var googleView: UIView!
-    
     @IBOutlet var appleView: UIView!
-    
     @IBOutlet var facebookView: UIView!
-    
     @IBOutlet var loginBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configureUI()
+        
+    }
+    
+    
+    func configureUI() {
         googleView.layer.borderColor =  UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1.0).cgColor
         googleView.layer.borderWidth = 0.5
         googleView.layer.cornerRadius = 10
@@ -37,7 +41,5 @@ class ViewController: UIViewController {
         loginBtn.layer.cornerRadius = 10
         loginBtn.layer.masksToBounds = true
     }
-
-
 }
 
